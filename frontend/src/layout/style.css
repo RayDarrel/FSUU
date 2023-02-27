@@ -1,0 +1,134 @@
+:root{
+    /* --back-color: #20262E; */
+    --back-color: rgb(255, 255, 255);
+    --color-text: rgb(3, 3, 3);
+    --sidebar: #2a323d;
+    --sidebar-text: #828282;
+}
+*{
+    text-decoration: none !important;
+}
+h5{
+    font-size: 15px !important;
+    color: #2a323d !important;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--back-color) !important;
+}
+
+.bg-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.877), rgba(0, 0, 0, 0.5)), url("../assets/Urios_Main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+h4{
+    color: var(--color-text);
+}
+.text-parag{
+    text-align: justify;
+    letter-spacing: 0.8px;
+    line-height: 40px;
+    color: var(--color-text) !important;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 260px;
+    /* background-color: var(--sidebar); */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+}
+.sidebar-top{
+    display: block;
+    padding: 20px 0px;
+}
+.sidebar-links ul {
+    position: relative;
+}
+
+.sidebar-links li {
+    position: relative;
+    padding: 2.5px 0;
+    list-style: none;
+}
+
+.sidebar-links a {
+    color: var(--sidebar-text) !important;
+    /* font-weight: 400; */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    height: 47px;
+    transition: 0.3s ease-in-out;
+    /* font-weight: bold; */
+}
+.sidebar-links a:hover{
+    background-color: var(--sidebar);
+    color: white !important;
+    border-radius: 5px;
+    padding: 15px;
+}
+.main{
+    padding: 1rem 2rem;
+    margin-left: 250px;
+    transition: 0.4s ease-in;
+    color: #1f2027;
+}
+.main.on{
+    margin-left: 250px;
+}
+.main.off{
+    margin-left: 0px;
+}
+
+.sidebar.hide{
+    left: -300px;
+}
+.sidebar.show{
+    left: 0px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .sidebar{
+        left: -300px;
+    }
+    .main{
+        margin-left: 0px;
+    }
+}
+
+/* end of sidebar */
+
+
+/* Menubar */
+.p-menubar {
+    border-radius: 4px !important;
+    /* background-color: var(--sidebar) !important; */
+    background-color: #131949 !important;
+    border: 0px !important;
+    /* border: 1px solid #2f2f31 !important; */
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text, .p-menuitem-icon{
+    color:  white !important;
+}
+.p-menuitem-link{
+    color:  white !important;
+    transition: 0.5s ease-in !important;
+}
+.p-menuitem-link:hover{
+    background-color: transparent !important;
+    color: #2a323d !important;
+}
